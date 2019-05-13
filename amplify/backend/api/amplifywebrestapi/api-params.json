@@ -1,0 +1,48 @@
+{
+    "paths": [
+        {
+            "name": "/pets",
+            "lambdaFunction": "amplifywebrestapilambda",
+            "privacy": {
+                "private": true,
+                "auth": [
+                    "/GET"
+                ]
+            }
+        },
+        {
+            "name": "/people",
+            "lambdaFunction": "amplifywebrestapilambda",
+            "privacy": {
+                "private": true,
+                "auth": [
+                    "/GET"
+                ]
+            }
+        }
+    ],
+    "resourceName": "amplifywebrestapi",
+    "apiName": "amplifywebrestapi",
+    "functionArns": [
+        {
+            "lambdaFunction": "amplifywebrestapilambda"
+        }
+    ],
+    "privacy": {
+        "auth": 2,
+        "unauth": 0,
+        "authRoleName": "amplify-web-app-local-20190513104326-authRole",
+        "unAuthRoleName": "amplify-web-app-local-20190513104326-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "amplifywebrestapilambda",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ],
+    "uuid": "aaa32ba6"
+}
